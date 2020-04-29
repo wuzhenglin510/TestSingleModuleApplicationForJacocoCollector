@@ -15,6 +15,13 @@ import java.util.stream.Collectors;
 @RequestMapping(value = "repository")
 public class BookRepositoryController {
 
+    @GetMapping("get_book")
+    public BookBasicInfo getBook(@RequestParam(value = "bookName") String bookName) {
+        BookStorageInfo bookStorageInfo = BookRepository.getBookStorageInfo(bookName);
+
+        return new BookBasicInfo(bookStorageInfo.getBookName(), bookStorageInfo.getStock());
+    }
+
     @GetMapping("list_books")
     public List<BookBasicInfo> listBooks() {
         List<BookStorageInfo> bookStorageInfos = BookRepository.listBookStorageInfo();
@@ -23,10 +30,6 @@ public class BookRepositoryController {
                 .collect(Collectors.toList());
     }
 
-    @GetMapping("get_book")
-    public BookBasicInfo getBook(@RequestParam(value = "bookName") String bookName) {
-        BookStorageInfo bookStorageInfo = BookRepository.getBookStorageInfo(bookName);
-        return new BookBasicInfo(bookStorageInfo.getBookName(), bookStorageInfo.getStock());
-    }
+
 
 }
