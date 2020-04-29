@@ -19,6 +19,9 @@ public class BookRepositoryController {
     public BookBasicInfo getBook(@RequestParam(value = "bookName") String bookName) {
         BookStorageInfo bookStorageInfo = BookRepository.getBookStorageInfo(bookName);
         //我是注释啦啦啦
+        /*
+        我还是注释啦
+         */
         return new BookBasicInfo(bookStorageInfo.getBookName(), bookStorageInfo.getStock());
     }
 
