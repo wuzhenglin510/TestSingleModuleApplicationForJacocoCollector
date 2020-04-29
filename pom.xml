@@ -18,7 +18,7 @@
 <!--        todo register on SonarQube to get your application projectKey and login token -->
         <sonar.host.url>http://localhost:9000</sonar.host.url>
         <sonar.projectKey>TestSingleModuleApplicationForJacocoCollector</sonar.projectKey>
-        <sonar.login>62dcd9ea26593d440716d987bdb02ba6803bf8c8</sonar.login>
+        <sonar.login>ce0feab0681a6a4298405733f80b2d822614c253</sonar.login>
     </properties>
 
     <dependencies>
