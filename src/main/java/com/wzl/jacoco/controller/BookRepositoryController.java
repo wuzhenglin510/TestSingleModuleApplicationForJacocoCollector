@@ -31,6 +31,7 @@ public class BookRepositoryController {
     @GetMapping("list_books")
     public List<BookBasicInfo> listBooks() {
         log.info("我觉得我们需要加点什么功能在这里");
+        log.info("我觉得我们需要加点什么功能在这里");
         List<BookStorageInfo> bookStorageInfos = BookRepository.listBookStorageInfo();
         return bookStorageInfos.stream()
                 .map(item -> new BookBasicInfo(item.getBookName(), item.getStock()))
