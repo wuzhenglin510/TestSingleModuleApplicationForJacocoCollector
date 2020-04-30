@@ -5,11 +5,13 @@ import com.alibaba.fastjson.JSONObject;
 import com.wzl.jacoco.entity.BookStorageInfo;
 import com.wzl.jacoco.entity.IOU;
 import com.wzl.jacoco.entity.ReturnLog;
+import lombok.extern.slf4j.Slf4j;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
+@Slf4j
 public class BookRepository {
 
     private static final Map<String, BookStorageInfo> storage;
@@ -66,6 +68,7 @@ public class BookRepository {
      * @throws Exception
      */
     public static void borrowBook(String bookName, String borrower, Integer amount) {
+        log.info("我觉得我们需要加点什么功能在这里");
         assert storage.containsKey(bookName) : "book should exist in storage!";
         assert amount > 0 : "borrow amount should large then zero!";
         synchronized (BookRepository.class) {
@@ -88,6 +91,7 @@ public class BookRepository {
      * @throws Exception
      */
     public static void returnBook(String bookName, String borrower, Integer amount) throws Exception {
+        log.info("我觉得我们需要加点什么功能在这里");
         if (!storage.containsKey(bookName)) {
             throw new Exception("book info not exist in storage");
         }
