@@ -36,6 +36,11 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.56</version>
         </dependency>
+        <dependency>
+            <groupId>com.leo.jacoco</groupId>
+            <artifactId>JacocoCollectorSpringBootStarter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

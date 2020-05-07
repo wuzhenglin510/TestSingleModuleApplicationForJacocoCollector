@@ -1,2 +1,14 @@
 server:
   port: 6060
+jacoco:
+  enabled: "true"
+  register:
+    origin: "http://localhost:7070"
+  application:
+    git: "https://github.com/wuzhenglin510/TestSingleModuleApplicationForJacocoCollector.git"
+    name: "TestSingleModuleApplicationForJacocoCollector"
+    host: "localhost"
+    jacoco-port: 6300
+    master-branch: "master"
+    test-branch: "pre"
+
